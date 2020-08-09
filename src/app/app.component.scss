@@ -1,0 +1,45 @@
+html{
+    background-color: black;
+}
+
+.h3_title{
+    padding-bottom: 5rem;
+}
+
+.mat-card1{
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 10vh;
+    text-align: center;
+    color: #00FF00;
+}
+
+.card{
+    background-color: black;
+    color: #00FF00;
+}
+
+.input{
+    margin-bottom: 1.5rem;
+}
+
+input{
+    background-color: black;
+    border: 1px solid #00FF00;
+    color: #00FF00;
+}
+
+.btn:disabled{
+    background-color: grey;
+    
+    border: 1px solid #00FF00;
+}
+
+.btn{
+    padding: 1px;
+    transition: all .2s;
+}
+
+.btn:active{
+    transform: translateY(-3px);
+}
