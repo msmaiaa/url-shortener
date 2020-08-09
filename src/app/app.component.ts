@@ -28,7 +28,7 @@ export class AppComponent {
     this.urlService.addUrl(this.urlForm.value)
     .subscribe((note)=>{
       this.created = true;
-      this.createdUrl = note.url;
+      this.createdUrl = 'http://localhost:4200/' + note.slug;
       console.log(note)
     })
   }
