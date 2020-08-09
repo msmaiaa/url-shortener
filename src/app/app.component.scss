@@ -1,3 +1,16 @@
+@keyframes moveInBottom{
+    0%{
+        /* y = de cima pra baixo */
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 html{
     background-color: black;
 }
@@ -12,6 +25,9 @@ html{
     margin-top: 10vh;
     text-align: center;
     color: #00FF00;
+    animation-name: moveInBottom;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
 }
 
 .card{
