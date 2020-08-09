@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class UrlService {
 
-  url: string = "http://localhost:3001/url"
+  url: string = "https://url-shortener-server.herokuapp.com/url"
 
   constructor(private http:HttpClient) { }
 
