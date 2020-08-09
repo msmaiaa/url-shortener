@@ -18,7 +18,7 @@
       <button type="submit" [disabled]="!urlForm.valid"  mat-button class="btn">Submit</button>
     </mat-card-actions>
   </form>
-  <p *ngIf="created">Url created successfuly! link: {{createdUrl}} </p>
+  <p *ngIf="created && createdUrl">Url created successfuly! link: {{createdUrl}} </p>
   </mat-card>
 </div>
 

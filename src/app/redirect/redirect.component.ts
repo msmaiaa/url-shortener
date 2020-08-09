@@ -12,13 +12,22 @@ export class RedirectComponent implements OnInit {
   constructor(private route:ActivatedRoute, private urlService:UrlService, private router:Router) { }
 
   ngOnInit(): void {
-    console.log("no componente redirect")
     this.route.paramMap.subscribe((params:ParamMap)=>{
       let slug = params.get('slug');
       this.urlService.getUrl(slug)
       .subscribe((sUrl)=>{
-        console.log(sUrl.url);
-        window.open(`http://${sUrl.url}`);
+        if(!sUrl){
+          this.router.navigateByUrl('/');
+          return;
+        }
+        if(sUrl.url.match(/http:/g) || sUrl.url.match(/https:/g)){
+          window.open(`${sUrl.url}`);
+        }else{
+          window.open(`http://${sUrl.url}`);
+        }
+        
+        this.router.navigateByUrl('/');
+      }, (err)=>{
         this.router.navigateByUrl('/');
       })
     })

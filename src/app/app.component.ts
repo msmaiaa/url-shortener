@@ -12,6 +12,7 @@ export class AppComponent {
 
   reg = '(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?';
   created = false;
+  createdUrl = null;
 
   urlForm = this.fb.group({
     'url': ['', [Validators.required, Validators.maxLength(250), Validators.pattern(this.reg)]],
@@ -26,6 +27,8 @@ export class AppComponent {
   onSubmit(){
     this.urlService.addUrl(this.urlForm.value)
     .subscribe((note)=>{
+      this.created = true;
+      this.createdUrl = note.url;
       console.log(note)
     })
   }

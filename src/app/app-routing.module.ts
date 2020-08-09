@@ -5,7 +5,8 @@ import { RedirectComponent } from './redirect/redirect.component';
 
 
 const routes: Routes = [
-  {path: ':slug', component:RedirectComponent}
+  {path: ':slug', component:RedirectComponent},
+  {path: '**', redirectTo: ''}
 ];
 
 @NgModule({
