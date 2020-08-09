@@ -28,7 +28,7 @@ export class AppComponent {
     this.urlService.addUrl(this.urlForm.value)
     .subscribe((note)=>{
       this.created = true;
-      this.createdUrl = 'http://localhost:4200/' + note.slug;
+      this.createdUrl = 'https://minified-url-shortener.herokuapp.com/' + note.slug;
       console.log(note)
     })
   }
