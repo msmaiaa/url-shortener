@@ -2,7 +2,8 @@
 
 
 This is a basic and minimalist url shortener.
-
+Demo: https://minified-url-shortener.herokuapp.com/
+![Preview](https://github.com/msmaiaa/url-shortener/blob/master/download%20(1).png)
 
 # Technologies used
 
